@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <video
+      id="video1"
+      data-able-player
+      preload="auto"
+      width="800"
+      height="600"
+      data-youtube-id="RnuGFhVkIlQ"
+    ></video>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
+  name: "app"
 };
 </script>
 
