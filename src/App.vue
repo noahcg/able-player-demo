@@ -5,10 +5,16 @@
       <div class="links">
         <nav class="nav-links">
           <div class="nav-item">
-            <router-link class="nav-link" to="/">YouTube Player</router-link>
+            <router-link class="nav-link" to="/">Home</router-link>
           </div>
           <div class="nav-item">
-            <router-link class="nav-link" to="/simpleplayer">Simple Player</router-link>
+            <router-link class="nav-link" to="/youtubeplayer">YouTube Player</router-link>
+          </div>
+          <div class="nav-item">
+            <router-link class="nav-link" to="/videoplayer">Video Player</router-link>
+          </div>
+          <div class="nav-item">
+            <router-link class="nav-link" to="/audioplayer">Audio Player</router-link>
           </div>
         </nav>
       </div>
@@ -26,6 +32,10 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,13 +46,12 @@ export default {
 .navbar {
   z-index: 20;
   right: 0;
-  height: 3.6rem;
+  height: auto;
   background-color: #fff;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
   padding: 0.7rem 1.5rem;
   line-height: 2.2rem;
-  margin-bottom: 2em;
 }
 .navbar .site-name {
   font-size: 1.3rem;
@@ -53,15 +62,12 @@ export default {
   display: block;
 }
 .navbar .links {
-  padding-left: 1.5rem;
   box-sizing: border-box;
   background-color: #fff;
-  white-space: nowrap;
   font-size: 0.9rem;
-  position: absolute;
-  right: 1.5rem;
-  top: 0.7rem;
-  display: flex;
+  position: relative;
+  display: block;
+  text-align: left;
 }
 .navbar .links .nav-links {
   display: inline-block;
@@ -96,9 +102,22 @@ a {
 .nav-links a:hover {
   color: #2c3e50;
 }
-.nav-item > a:not(.external).router-link-active,
+.nav-item > a:not(.external).is-active,
 .nav-item > a:not(.external):hover {
   margin-bottom: -2px;
   border-bottom: 2px solid #46bd87;
+}
+@media (min-width: 768px) {
+  .navbar {
+    height: 3.6rem;
+  }
+  .navbar .links {
+    padding-left: 1.5rem;
+    white-space: nowrap;
+    position: absolute;
+    right: 1.5rem;
+    top: 0.7rem;
+    display: flex;
+  }
 }
 </style>
