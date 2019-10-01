@@ -1,25 +1,23 @@
 <template>
   <section class="container">
     <div class="content">
-      <h1>YouTube Player</h1>
-      <p>This is an example of a video player using a YouTube hosted video. There is no source element added to the video only a YouTube ID attribute. This example shows closed captions and an interactive transcript.</p>
+      <h1>Video Player</h1>
+      <p>This is an example of a video player using a source element with a .m4v "src" attribute. This example has no closed captions and no transcript.</p>
     </div>
-    <div id="youtube-player">
-      <video
-        id="video1"
-        data-able-player
-        preload="auto"
-        width="800"
-        height="600"
-        data-youtube-id="RnuGFhVkIlQ"
-      ></video>
+    <div id="single-player">
+      <video id="video1" data-able-player preload="auto" width="800" height="600">
+        <source
+          type="video/mp4"
+          src="https://exhibitions.ushmm.org/storage/388/df5d493c-3dca-11e8-94fe-0a8fdb86ecba.m4v"
+        />
+      </video>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "youtubeplayer",
+  name: "videoplayer",
   mounted() {
     if (localStorage.getItem("reloaded")) {
       // The page was just reloaded. Clear the value from local storage
@@ -50,7 +48,7 @@ p {
   margin: 0 0 20px 0;
   text-align: left;
 }
-#youtube-player {
+#single-player {
   margin-top: 50px;
 }
 </style>
