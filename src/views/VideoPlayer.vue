@@ -5,7 +5,14 @@
       <p>This is an example of a video player using a source element with a .m4v "src" attribute. This example has no closed captions and no transcript.</p>
     </div>
     <div id="single-player">
-      <video id="video1" data-able-player preload="auto" width="800" height="600">
+      <video
+        id="video1"
+        data-able-player
+        preload="none"
+        width="800"
+        height="600"
+        poster="https://exhibitions.ushmm.org/storage/520/4d4c6404-4326-11e8-82b2-0a8fdb86ecba.jpeg"
+      >
         <source
           type="video/mp4"
           src="https://exhibitions.ushmm.org/storage/388/df5d493c-3dca-11e8-94fe-0a8fdb86ecba.m4v"
