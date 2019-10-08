@@ -8,7 +8,7 @@ import AudioPlayer from "./views/AudioPlayer.vue";
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   linkExactActiveClass: "is-active",
   routes: [
